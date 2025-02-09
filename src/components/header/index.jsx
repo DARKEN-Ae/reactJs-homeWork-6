@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import "./Header.scss";
 
@@ -15,13 +15,17 @@ const Header = () => {
           </nav>
           <div className="person-profile">
             <div className="user">
-              <img
-                src="https://e7.pngegg.com/pngimages/527/663/png-clipart-logo-person-user-person-icon-rectangle-photography.png"
-                alt=""
-              />
-              <p>Arslon</p>
+              <a href="https://t.me/darken_edit">
+                <img
+                  src="https://e7.pngegg.com/pngimages/527/663/png-clipart-logo-person-user-person-icon-rectangle-photography.png"
+                  alt=""
+                />
+                <p>Arslon</p>
+              </a>
             </div>
-            <button>Logout</button>
+            <Link to={"/"}>
+              <button>Logout</button>
+            </Link>
           </div>
         </div>
       </div>
