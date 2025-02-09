@@ -14,9 +14,9 @@ const DebtsPage = () => {
     getStoredDebts().length
       ? getStoredDebts()
       : [
-          { id: 0, name: "Shoxobiddin", debt: "0.001", phone: "+998999999999" },
+          { id: 0, name: "Javohir", debt: "0.001", phone: "+998999999999" },
           { id: 1, name: "Alisher", debt: "1", phone: "+998977777777" },
-          { id: 2, name: "Bekzod", debt: "5.5", phone: "+998901234567" },
+          { id: 2, name: "Shoxobiddin", debt: "50", phone: "+998901234567" },
           { id: 3, name: "Ziyodulla", debt: "2.75", phone: "+998994445566" },
           { id: 4, name: "Madina", debt: "0.5", phone: "+998909998877" },
           { id: 5, name: "Diyor", debt: "10", phone: "+998935550011" },
