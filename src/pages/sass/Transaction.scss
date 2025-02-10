@@ -1,37 +1,28 @@
-.transaction-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #f8f9fa5b;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
+.section-1 {
+  h1 {
+    font-weight: bold;
+    text-align: center;
+  }
 }
+.transaction-cards {
+  .transaction-card {
+    margin-bottom: 1rem;
+    background-color: #ffffff52;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
 
-.users-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.user-card {
-  background: #ffffff5b;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.transactions-list {
-  margin-top: 20px;
-}
-
-.transaction-card {
-  background: #e9ecef;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+    &:hover {
+      background-color: #05eeff49;
+    }
+    h2 {
+      margin-bottom: 0;
+    }
+  }
 }

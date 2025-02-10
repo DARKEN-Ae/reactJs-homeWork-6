@@ -1,78 +1,64 @@
-import React, { useState, useEffect } from "react";
-import { Card } from "react-bootstrap";
-import "./sass/Transaction.scss"; // Stil uchun
+import React, { useState } from "react";
+import "./sass/Transaction.scss";
 
-const TransactionPage = () => {
-  const [debts, setDebts] = useState([]);
-  const [transactions, setTransactions] = useState([]);
-
-  // **DebtsPage dan ma'lumotlarni olish**
-  useEffect(() => {
-    const savedDebts = JSON.parse(localStorage.getItem("debts")) || [];
-    setDebts(savedDebts);
-
-    const savedTransactions =
-      JSON.parse(localStorage.getItem("transactions")) || [];
-    setTransactions(savedTransactions);
-  }, []);
-
-  // **Tranzaksiyalarni saqlash**
-  useEffect(() => {
-    localStorage.setItem("transactions", JSON.stringify(transactions));
-  }, [transactions]);
-
-  // **Yangi tranzaksiya qo'shish**
-  const addTransaction = (id, name, amount) => {
-    const newTransaction = {
-      id,
-      name,
-      amount,
-      date: new Date().toLocaleString(),
-    };
-    setTransactions([...transactions, newTransaction]);
-  };
-
+const Transaction = () => {
+  const [transaction] = useState([
+    {
+      id: 1,
+      name: "Alisher",
+      type: "deposit",
+      amount: 50.0,
+      currency: "USDT",
+      status: "completed",
+      date: "2024-02-10T12:30:00Z",
+    },
+    {
+      id: 2,
+      name: "Javohir",
+      type: "withdrawal",
+      amount: 20.5,
+      currency: "USDT",
+      status: "pending",
+      date: "2024-02-09T15:45:00Z",
+    },
+    {
+      id: 3,
+      name: "Shoxobiddin",
+      type: "deposit",
+      amount: 100.0,
+      currency: "USDT",
+      status: "failed",
+      date: "2024-02-08T09:20:00Z",
+    },
+  ]);
   return (
-    <div className="transaction-container">
-      <h2 className="text-center mb-4">Transaction Page</h2>
-
-      {/* Foydalanuvchilar ro‘yxati */}
-      <div className="users-list">
-        {debts.map((debt) => (
-          <Card key={debt.id} className="user-card">
-            <Card.Body>
-              <h5>{debt.name}</h5>
-              <p>
-                Qarz: <strong>{debt.debt}$</strong>
-              </p>
-              <button
-                className="btn btn-primary"
-                onClick={() => addTransaction(debt.id, debt.name, 10)}
-              >
-                +10$ Qo'shish
-              </button>
-            </Card.Body>
-          </Card>
-        ))}
+    <section>
+      <div className="container">
+        <div className="section-1">
+          <h1>Transaction Page</h1>
+        </div>
+        <div className="transaction-cards">
+          <div className="transaction-card">
+            {/* <ul>
+              {transaction.map((e) => (
+                <li key={e.id}>
+                  <p>{e.type.toUpperCase()}</p> - {e.amount}
+                  {e.currency} <span>({e.status})</span>
+                </li>
+              ))}
+            </ul> */}
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
       </div>
-
-      {/* Tranzaksiyalar */}
-      <h3 className="mt-4">Tranzaksiyalar</h3>
-      <div className="transactions-list">
-        {transactions.map((tx, index) => (
-          <Card key={index} className="transaction-card">
-            <Card.Body>
-              <h5>{tx.name}</h5>
-              <p>
-                <strong>{tx.amount}$</strong> qo'shildi
-              </p>
-              <small>{tx.date}</small>
-            </Card.Body>
-          </Card>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 };
 
-export default TransactionPage;
+export default Transaction;
