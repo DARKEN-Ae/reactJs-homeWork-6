@@ -9,9 +9,9 @@ const Header = () => {
       <div className="container">
         <div className="nav_link">
           <nav>
-            <NavLink to="/home">Home</NavLink>
-            <NavLink to="/debts">Debts</NavLink>
-            <NavLink to="/transaction">Transaction</NavLink>
+            <NavLink to="/home">Asosiy</NavLink>
+            <NavLink to="/debts">Qarizlar</NavLink>
+            <NavLink to="/transaction">Tranzaksiya</NavLink>
           </nav>
           <div className="person-profile">
             <div className="user">
@@ -24,7 +24,7 @@ const Header = () => {
               </a>
             </div>
             <Link to={"/"} target="_blank">
-              <button>Logout</button>
+              <button>Chiqish</button>
             </Link>
           </div>
         </div>

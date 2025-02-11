@@ -7,7 +7,7 @@ const HomePage = () => {
     <section>
       <div className="container">
         <div className="home-page">
-          <h1>Empty Page</h1>
+          <h1>Bo'sh sahifa</h1>
         </div>
       </div>
     </section>

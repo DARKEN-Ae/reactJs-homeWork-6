@@ -86,63 +86,63 @@ const DebtsPage = () => {
     <main>
       <div className="container">
         <div className="d-flex justify-content-between">
-          <h2 className="text-center">All Debts</h2>
+          <h2 className="text-center">Barcha qarizlar</h2>
           <Button variant="primary" onClick={openModalDebt}>
-            <b>Add debt</b>
+            <b>Qo'shish</b>
           </Button>
         </div>
         <Modal show={show} onHide={handleClose}>
           <Form noValidate validated={validated} onSubmit={submit}>
             <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
+              <Modal.Title>Ro'yxat qo'shish</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <Form.Group className="mb-3" controlId="name">
-                <Form.Label>Name</Form.Label>
+                <Form.Label>Ismi</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Name"
+                  placeholder="Ismingizni kiriting"
                   required
                   onChange={handleDebt}
                   value={debt.name}
                 />
-                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                <Form.Control.Feedback>Yaxshi✅</Form.Control.Feedback>
                 <Form.Control.Feedback type="invalid">
-                  Please fill!
+                  Iltimos to'ldiring!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-3" controlId="debt">
-                <Form.Label>Debt</Form.Label>
+                <Form.Label>Qariz</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Debt"
+                  placeholder="Qarizlar"
                   required
                   onChange={handleDebt}
                   value={debt.debt}
                 />
-                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                <Form.Control.Feedback>Yaxshi✅</Form.Control.Feedback>
                 <Form.Control.Feedback type="invalid">
-                  Please fill!
+                  Iltimos to'ldiring!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-3" controlId="phone">
-                <Form.Label>Phone</Form.Label>
+                <Form.Label>Tel</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Phone"
+                  placeholder="Telefon raqamingiz"
                   required
                   onChange={handleDebt}
                   value={debt.phone}
                 />
-                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                <Form.Control.Feedback>Yaxshi✅</Form.Control.Feedback>
                 <Form.Control.Feedback type="invalid">
-                  Please fill!
+                  Iltimos to'ldiring!
                 </Form.Control.Feedback>
               </Form.Group>
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>
-                Close
+                Yopish
               </Button>
               <Button variant="primary" type="submit">
                 {selected === null ? "Add" : "Save"} debt

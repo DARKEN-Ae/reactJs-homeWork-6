@@ -15,10 +15,10 @@ const OneCard = ({ id, name, debt, phone, editDebt, deleteDebt }) => {
         <p>{phone}</p>
         <div className="buttons">
           <button className="btn btn-success" onClick={() => editDebt(id)}>
-            Edit ({id})
+            Tahrirlash ({id})
           </button>
           <button className="btn btn-danger" onClick={() => deleteDebt(id)}>
-            Delete
+            O'chirish
           </button>
         </div>
       </div>
