@@ -5,8 +5,8 @@ import "./Card.scss";
 
 const OneCard = ({ id, name, debt, phone, editDebt, deleteDebt }) => {
   return (
-    <Card body className="my-3">
-      <div className="d-flex align-items-center justify-content-between bg-light p-3 rounded-2 debts_section">
+    <Card body className="my-3 card-father">
+      <div className="d-flex align-items-center justify-content-between bg-light p-3 rounded-5 debts_section">
         <h4>{name}</h4>
         <p>
           {debt}

@@ -1,3 +1,8 @@
+.card-father {
+  background: rgba(255, 255, 255, 0.384);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+}
 .debts_section {
   h4 {
     @media (max-width: 768px) {

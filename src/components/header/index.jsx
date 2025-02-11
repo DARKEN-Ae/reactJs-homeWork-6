@@ -23,7 +23,7 @@ const Header = () => {
                 <p>Arslon</p>
               </a>
             </div>
-            <Link to={"/"}>
+            <Link to={"/"} target="_blank">
               <button>Logout</button>
             </Link>
           </div>

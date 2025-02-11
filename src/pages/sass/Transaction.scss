@@ -1,39 +1,34 @@
-.section-1 {
-  h1 {
-    font-weight: bold;
+.transaction-page {
+  h2 {
     text-align: center;
   }
-}
-.transaction-cards {
-  .transaction-card {
-    margin-bottom: 1rem;
-    background-color: #ffffff52;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  p {
+    text-align: center;
+    color: #fff;
+  }
+  ul {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-
-    &:hover {
-      background-color: #05eeff49;
-    }
-    h2 {
-      margin-bottom: 0;
-    }
-    ul {
-      display: flex;
-      align-items: start;
-      flex-direction: column;
-      li {
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-        list-style-type: none;
-        flex-direction: column;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 0;
+    li {
+      background: rgba(0, 217, 255, 0.384);
+      padding: 20px;
+      color: #fff;
+      border-radius: 24px;
+      list-style-type: none;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        background: rgba(255, 255, 255, 0.397);
+        color: rgb(0, 217, 255);
+      }
+      @media (max-width: 430px) {
+        font-size: small;
+        text-align: center;
+      }
+      @media (max-width: 360px) {
+        font-size: x-small;
+        text-align: center;
       }
     }
   }
